@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="ISO-8859-1">
+    <title> Job Details</title>
+
+</head>
+
+<body>
+
+    <div class="container " align="center">
+        <h1 style="color: rgb(69,76,192);"> Job Details</h1>
+        <hr>
+        <form action="#" (ngSubmit)="onSubmit()" method="POST">
+            <div class="form-group">
+                <label style="color: rgb(141,28,162);">Job Title</label>
+
+                <input type="text" id="job_title" [(ngModel)]="job.job_title" name="title" style="color: rgb(237,23,80);" placeholder="Title"
+                    class="form-control mb-4 col-4">
+                    <label style="color: rgb(141,28,162);">Job Type</label>
+                <input type="text" id="job_type" [(ngModel)]="job.job_type" name="type" style="color: rgb(237,23,80);" placeholder="Type"
+                    class="form-control mb-4 col-4">
+                    <label style="color: rgb(141,28,162);">Job Location</label>
+                <input type="text" id="job_location" [(ngModel)]="job.job_location" name="location" style="color: rgb(237,23,80);" placeholder="Location"
+                    class="form-control mb-4 col-4">
+
+                <button style="color: rgb(34,175,94);" type="submit" class="btn btn-dark col-2">Save Job
+                </button>
+            </div>
+        </form>
+        <hr>
+
+    </div>
+</body>
+
+</html>

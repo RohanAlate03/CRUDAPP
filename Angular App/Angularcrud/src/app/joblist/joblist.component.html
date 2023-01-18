@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+
+    <meta charset="ISO-8859-1">
+
+    <title>JOBS</title>
+
+    
+
+</head>
+
+<body>
+
+<div class="container my-2" align="center">
+    <h3 style="color: rgb(69,76,192);">JOB LIST</h3>
+    <table style="width:80%" border="1" class = "table table-striped table-responsive-md">
+    <thead class="thead-dark">
+    <tr>
+
+    <th style="color: rgb(237,23,80);">Title</th>
+
+    <th style="color: rgb(237,23,80);">Type</th>
+    <th style="color: rgb(237,23,80);">Location</th>
+
+    <th style="color: rgb(237,23,80);">Action</th>
+
+    </tr>
+
+</thead>
+
+    <tbody>
+
+<tr *ngFor="let job of jobs">
+    <td>{{job.job_title}}</td>
+    <td>{{job.job_type}}</td>
+    <td>{{job.job_location}}</td>
+    <td> <button (click)="updatejob(job.id)" routerLink="/updatejob" class="btn btn-success">Update</button>
+
+        <button (click)="deletejob(job.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
+    </td>
+
+    </tr>
+
+</tbody>
+
+</table>
+<button style="color: rgb(34,175,94);"(click)="addJobs()" class="btn btn-success btn btn-dark col-2" routerLink="addjob" >Add job</button>
+    
+
+</div>
+
+</body>
+
+</html>
+
+
