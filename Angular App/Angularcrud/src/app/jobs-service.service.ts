@@ -8,7 +8,7 @@ import { Job } from './job';
 })
 export class JobsServiceService {
   
-  private baseURL="http://localhost:8080/api/v3/Jobs";
+  private baseURL="http://localhost:9091/api/v3/Jobs";
   constructor(private httpClient:HttpClient) { }
 
   getJobList(): Observable<Job[]>{
@@ -16,18 +16,18 @@ export class JobsServiceService {
 }
 
 addjob(job:Job):Observable<any>{
-  return this.httpClient.post("http://localhost:8080/api/v3/Jobs",job);
+  return this.httpClient.post("http://localhost:9091/api/v3/Jobs",job);
 
 }
 
 getJobById(id:number):Observable<Job>{
-  return this.httpClient.get<Job>(`http://localhost:8080/api/v3/Jobs/jobs/${id}`);
+  return this.httpClient.get<Job>(`http://localhost:9091/api/v3/Jobs/jobs/${id}`);
 }
 
 updatejob(id:number,job:Job):Observable<any>{
-  return this.httpClient.put(`http://localhost:8080/api/v3/Jobs/${id}`,job);
+  return this.httpClient.put(`http://localhost:9091/api/v3/Jobs/${id}`,job);
 }
 deletejob(id:number):Observable<Object>{
-  return this.httpClient.delete(`http://localhost:8080/api/v3/Jobs/${id}`);
+  return this.httpClient.delete(`http://localhost:9091/api/v3/Jobs/${id}`);
 }
 }
